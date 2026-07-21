@@ -1,0 +1,294 @@
+{
+  "seo": {
+    "siteUrl": "https://qartibe.space",
+    "title": "Qartibe | Digital Marketing Agency for Growing Businesses",
+    "description": "Qartibe is a digital marketing agency helping businesses worldwide grow with Meta Ads, SEO, website design, and social media marketing, run as one connected growth strategy.",
+    "keywords": [
+      "digital marketing agency",
+      "SEO agency",
+      "Meta ads agency",
+      "Facebook ads management",
+      "social media marketing agency",
+      "website design company",
+      "growth marketing agency",
+      "small business marketing agency",
+      "affordable digital marketing agency",
+      "online marketing agency for startups",
+      "ecommerce marketing agency",
+      "paid ads management agency"
+    ],
+    "ogImage": "/logo.png"
+  },
+  "hero": {
+    "eyebrow": "Digital Marketing Excellence",
+    "titleBefore": "Grow your business with marketing that",
+    "titleEmphasis": "compounds.",
+    "lead": "Meta Ads, SEO, websites, and social media, run as one connected growth engine, not six disconnected vendors.",
+    "statLabel": "AVG. LEAD GROWTH, 90 DAYS",
+    "statValue": "+142%"
+  },
+  "ticker": [
+    "+142% average lead growth",
+    "3.2x average ROAS",
+    "48-hour turnaround",
+    "50+ businesses scaled",
+    "Direct WhatsApp support"
+  ],
+  "about": {
+    "text": "We're a digital growth agency helping businesses scale through powerful ads, SEO, stunning websites, and social media marketing. We focus on real results, the kind you can see in your lead numbers, not just your engagement rate.",
+    "stats": [
+      {
+        "value": "50+",
+        "label": "Businesses scaled"
+      },
+      {
+        "value": "3.2x",
+        "label": "Avg. ROAS"
+      },
+      {
+        "value": "48h",
+        "label": "Response time"
+      }
+    ],
+    "videoUrl": "https://www.youtube.com/embed/rUqdIZiit9s"
+  },
+  "startupOffer": {
+    "eyebrow": "For New Businesses",
+    "badge": "Limited Offer",
+    "title": "Free Landing Page + Facebook Page Setup for Startups",
+    "lead": "Just launching? We'll build your landing page and set up your Facebook Business Page at no cost, so you can start marketing from day one.",
+    "features": [
+      "Custom one-page landing site",
+      "Facebook Business Manager & Page setup",
+      "Basic mobile-friendly design"
+    ],
+    "ctaText": "Claim Free Setup",
+    "waText": "Hi! I'm a startup and I'd like to claim the free landing page + Facebook page setup."
+  },
+  "services": [
+    {
+      "num": "01",
+      "title": "Meta Ads",
+      "desc": "Increase leads & sales with targeted, tested Facebook and Instagram ad campaigns.",
+      "videoUrl": "",
+      "waText": "Hi! I'm interested in your Meta Ads service.",
+      "slug": "meta-ads",
+      "seoTitle": "Meta Ads Management | Facebook & Instagram Advertising | Qartibe",
+      "seoDescription": "Grow leads and sales with expertly managed Facebook and Instagram ad campaigns. Audience testing, creative strategy, and performance tracking built to scale.",
+      "keywords": [
+        "Meta ads agency",
+        "Facebook ads management",
+        "Instagram advertising agency",
+        "paid social advertising"
+      ]
+    },
+    {
+      "num": "02",
+      "title": "SEO",
+      "desc": "Rank your business on Google with technical, on-page, and local SEO that compounds over time.",
+      "videoUrl": "",
+      "waText": "Hi! I'm interested in your SEO service.",
+      "slug": "seo",
+      "seoTitle": "SEO Services | Search Engine Optimization Agency | Qartibe",
+      "seoDescription": "Rank higher on Google with technical, on-page, and content SEO that compounds over time. Data-driven strategy built for long-term organic growth.",
+      "keywords": [
+        "SEO agency",
+        "search engine optimization services",
+        "organic growth agency",
+        "technical SEO"
+      ]
+    },
+    {
+      "num": "03",
+      "title": "Social Media",
+      "desc": "Grow engagement and followers with a content calendar built around what your audience actually shares.",
+      "videoUrl": "",
+      "waText": "Hi! I'm interested in your Social Media service.",
+      "slug": "social-media",
+      "seoTitle": "Social Media Marketing Services | Qartibe",
+      "seoDescription": "Grow engagement and followers with a content strategy built around what your audience actually shares. Full-service social media management.",
+      "keywords": [
+        "social media marketing agency",
+        "social media management",
+        "content strategy agency",
+        "Instagram growth agency"
+      ]
+    },
+    {
+      "num": "04",
+      "title": "Website Design",
+      "desc": "Modern, responsive websites built to convert visitors into leads, not just look good.",
+      "videoUrl": "",
+      "waText": "Hi! I'm interested in your Website Design service.",
+      "slug": "website-design",
+      "seoTitle": "Website Design Services | Conversion-Focused Web Design | Qartibe",
+      "seoDescription": "Modern, responsive websites built to convert visitors into leads, not just look good. Fast, mobile-friendly, and SEO-ready from launch.",
+      "keywords": [
+        "website design company",
+        "web design agency",
+        "conversion-focused web design",
+        "responsive website design"
+      ]
+    },
+    {
+      "num": "05",
+      "title": "Facebook Setup",
+      "desc": "Professional Business Manager and page setup, done right from day one.",
+      "videoUrl": "",
+      "waText": "Hi! I'm interested in your Facebook Setup service.",
+      "slug": "facebook-business-setup",
+      "seoTitle": "Facebook Business Page & Manager Setup | Qartibe",
+      "seoDescription": "Professional Facebook Business Manager and Page setup done right from day one, built to support ad campaigns and long-term growth.",
+      "keywords": [
+        "Facebook business setup",
+        "Facebook business manager setup",
+        "Facebook page setup service"
+      ]
+    },
+    {
+      "num": "06",
+      "title": "Website Migration",
+      "desc": "Safe transfer of your existing site with zero data loss and minimal downtime.",
+      "videoUrl": "",
+      "waText": "Hi! I'm interested in your Website Migration service.",
+      "slug": "website-migration",
+      "seoTitle": "Website Migration Services | Safe, Zero-Downtime Transfers | Qartibe",
+      "seoDescription": "Safely migrate your website to a new host or platform with zero data loss and minimal downtime, handled end-to-end by our team.",
+      "keywords": [
+        "website migration service",
+        "website transfer agency",
+        "site migration company"
+      ]
+    }
+  ],
+  "caseStudies": [
+    {
+      "tag": "Meta Ads",
+      "metric": "−61% CPL",
+      "title": "Skincare & beauty brand",
+      "desc": "Cut cost-per-lead by 61% in six weeks through audience testing and creative refresh.",
+      "slug": "dhaka-skincare-beauty-brand",
+      "body": "This skincare and beauty brand came to us with high ad spend but weak returns. We rebuilt their Meta Ads account from the ground up: fresh audience testing, new creative angles, and a simplified funnel from ad click to checkout. Within six weeks, cost-per-lead dropped 61% while lead volume held steady, freeing up budget to scale further.",
+      "image": "/work/dhaka-skincare-beauty-brand.svg"
+    },
+    {
+      "tag": "SEO",
+      "metric": "#1 ranking",
+      "title": "Restaurant chain",
+      "desc": "Reached #1 on Google for their top search terms within three months.",
+      "slug": "local-restaurant-chain",
+      "body": "This restaurant chain had strong food and loyal regulars, but almost no presence on Google Search. We ran a full SEO overhaul: Google Business Profile optimization, on-page fixes across their menu and location pages, and a targeted link-building push. Within three months they held the #1 spot for their top search terms.",
+      "image": "/work/local-restaurant-chain.svg"
+    },
+    {
+      "tag": "Social Media",
+      "metric": "2K → 28K",
+      "title": "Fashion e-commerce store",
+      "desc": "Grew Instagram following 14x with a consistent content and engagement strategy.",
+      "slug": "fashion-e-commerce-store",
+      "body": "This fashion e-commerce store had a small but engaged following and wanted real growth. We built a consistent content calendar around what their audience actually shared and engaged with, paired with a lightweight paid boost strategy. Their Instagram following grew from 2K to 28K, a 14x increase, alongside a measurable lift in site traffic from social.",
+      "image": "/work/fashion-e-commerce-store.svg"
+    }
+  ],
+  "reviews": {
+    "score": "4.8 / 5",
+    "count": "120 reviews",
+    "testimonials": [
+      {
+        "quote": "Our lead volume more than doubled in the first month. The team actually explains what they're doing, not just sending reports.",
+        "name": "Rima A.",
+        "role": "Skincare Brand Owner"
+      },
+      {
+        "quote": "We finally show up on Google when people search for us locally. Bookings picked up within the second month.",
+        "name": "Tanvir H.",
+        "role": "Restaurant Owner"
+      },
+      {
+        "quote": "Fast, responsive, and honest about what's working and what isn't. That honesty is rare in this industry.",
+        "name": "Nusrat J.",
+        "role": "Fashion Store Founder"
+      }
+    ]
+  },
+  "pricing": [
+    {
+      "name": "Starter",
+      "price": "$79",
+      "period": "/mo",
+      "featured": false,
+      "features": [
+        "SEO audit & fixes",
+        "1 ad platform managed",
+        "Monthly report",
+        "WhatsApp support"
+      ]
+    },
+    {
+      "name": "Growth",
+      "price": "$179",
+      "period": "/mo",
+      "featured": true,
+      "features": [
+        "Meta Ads + SEO + social",
+        "Content calendar",
+        "Bi-weekly reports",
+        "Priority WhatsApp support"
+      ]
+    },
+    {
+      "name": "Premium",
+      "price": "$349",
+      "period": "/mo",
+      "featured": false,
+      "features": [
+        "Full marketing suite",
+        "Website design & migration",
+        "Dedicated account manager",
+        "Weekly reports"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How long does SEO take to show results?",
+      "a": "Most clients see meaningful ranking movement within 6–10 weeks, with compounding gains after month three as content and backlinks build up."
+    },
+    {
+      "q": "Do you require long-term contracts?",
+      "a": "No. We work month-to-month by default. Longer commitments are optional and come with a discounted rate."
+    },
+    {
+      "q": "What's included in the price?",
+      "a": "Strategy, execution, and reporting for the services in your plan. Ad spend itself is billed separately, directly to the platform."
+    },
+    {
+      "q": "Can I upgrade or downgrade my plan?",
+      "a": "Yes, anytime. Changes take effect from your next billing cycle."
+    },
+    {
+      "q": "How do you report results?",
+      "a": "You'll get a plain-language report on the schedule for your plan, plus direct WhatsApp access to ask questions anytime."
+    }
+  ],
+  "team": [
+    {
+      "role": "Founder & Growth Strategist",
+      "name": "MD SIMUL HAQUE"
+    },
+    {
+      "role": "Paid Ads Specialist",
+      "name": "Hallway Cooper"
+    },
+    {
+      "role": "Content & SEO Lead",
+      "name": "Mohammad Malik Sheikh"
+    }
+  ],
+  "contact": {
+    "whatsappDisplay": "+880 1857 044379",
+    "whatsappLink": "https://wa.me/8801857044379",
+    "email": "qartibe.space@gmail.com",
+    "location": "Remote — Worldwide"
+  }
+}

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EEF1F4;
+  color: #14213D;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes pop {
+  to { opacity: 1; }
+}
+@keyframes scrollTicker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.growth-path {
+  fill: none;
+  stroke: #1F9E89;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw 2.2s ease forwards 0.3s;
+}
+.growth-dot {
+  fill: #F2A93B;
+  opacity: 0;
+  animation: pop 0.5s ease forwards 2.3s;
+}
+.ticker-track {
+  animation: scrollTicker 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .growth-path { stroke-dashoffset: 0; animation: none; }
+  .growth-dot { opacity: 1; animation: none; }
+  .ticker-track { animation: none; }
+}

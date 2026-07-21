@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F9E89"/>
+      <stop offset="100%" stop-color="#14213D"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <text x="200" y="158" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#EEF1F4" text-anchor="middle">Fashion E-commerce</text>
+</svg>
