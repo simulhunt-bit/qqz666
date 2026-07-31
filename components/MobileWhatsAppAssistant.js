@@ -50,47 +50,51 @@ export default function MobileWhatsAppAssistant({ contact, services = [], faq = 
   }, [services, faq]);
 
   return (
-    <div className="fixed bottom-4 right-4 z-[120] md:hidden">
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        aria-label="Open WhatsApp assistant"
-        className="flex h-14 w-14 items-center justify-center rounded-full border border-line bg-paper p-1 shadow-[0_18px_45px_-20px_rgba(20,33,61,0.45)] transition hover:-translate-y-0.5"
-      >
-        <img src="/logo.png" alt="Qartibe logo" className="h-11 w-11 object-contain" />
-      </button>
+    <div className="fixed bottom-4 right-4 z-[120]">
+      <div className="relative">
+        <div className="absolute inset-0 rounded-full bg-tealdeep/20 blur-xl" />
+        <button
+          type="button"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label="Open WhatsApp assistant"
+          className="relative flex h-14 w-14 items-center justify-center rounded-full border border-line bg-paper p-1 shadow-[0_18px_45px_-20px_rgba(20,33,61,0.45)] transition hover:-translate-y-0.5 sm:h-16 sm:w-16"
+        >
+          <span className="pointer-events-none absolute inset-0 rounded-full animate-pulse [animation-duration:3s] bg-tealdeep/10" />
+          <img src="/logo.png" alt="Qartibe logo" className="relative h-11 w-11 object-contain sm:h-12 sm:w-12" />
+        </button>
 
-      {open && (
-        <div className="absolute bottom-16 right-0 w-[88vw] max-w-[320px] rounded-[20px] border border-line bg-papercard p-3 shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)]">
-          <div className="mb-2 flex items-start justify-between gap-3">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-tealdeep">Quick help</p>
-              <p className="font-disp text-sm font-semibold text-ink">Pick a question</p>
-            </div>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              aria-label="Close WhatsApp assistant"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper text-inksoft transition hover:text-ink"
-            >
-              ✕
-            </button>
-          </div>
-
-          <div className="flex max-h-[60vh] flex-col gap-2 overflow-auto pr-1">
-            {options.map((option, index) => (
-              <a
-                key={`${option.label}-${index}`}
-                href={buildWhatsAppLink(contact?.whatsappLink, option.message)}
-                className="rounded-xl border border-line bg-paper px-3 py-2.5 text-left transition hover:border-tealdeep hover:bg-paper/90"
+        {open && (
+          <div className="absolute bottom-18 right-0 mt-3 w-[92vw] max-w-[340px] rounded-[22px] border border-line bg-papercard p-3 shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)] sm:right-0">
+            <div className="mb-2 flex items-start justify-between gap-3">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-tealdeep">Quick help</p>
+                <p className="font-disp text-sm font-semibold text-ink">Pick a question</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                aria-label="Close WhatsApp assistant"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-line bg-paper text-inksoft transition hover:text-ink"
               >
-                <span className="block text-[13px] font-semibold text-ink">{option.label}</span>
-                <span className="mt-0.5 block text-[11.5px] text-inksoft">Open WhatsApp and send this</span>
-              </a>
-            ))}
+                ✕
+              </button>
+            </div>
+
+            <div className="flex max-h-[60vh] flex-col gap-2 overflow-auto pr-1">
+              {options.map((option, index) => (
+                <a
+                  key={`${option.label}-${index}`}
+                  href={buildWhatsAppLink(contact?.whatsappLink, option.message)}
+                  className="rounded-xl border border-line bg-paper px-3 py-2.5 text-left transition hover:border-tealdeep hover:bg-paper/90"
+                >
+                  <span className="block text-[13px] font-semibold text-ink">{option.label}</span>
+                  <span className="mt-0.5 block text-[11.5px] text-inksoft">Open WhatsApp and send this</span>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
