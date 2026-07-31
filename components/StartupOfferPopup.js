@@ -64,15 +64,15 @@ export default function StartupOfferPopup({ offer, contact }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 sm:p-6"
-      style={{ background: 'rgba(20,33,61,0.45)' }}
+      className="fixed inset-0 z-50 flex items-end justify-center p-3 sm:items-center sm:p-6"
+      style={{ background: 'rgba(20,33,61,0.50)' }}
       role="dialog"
       aria-modal="true"
       aria-label={offer.title}
       onClick={close}
     >
       <div
-        className="relative bg-papercard border border-line rounded-[24px] p-6 sm:p-8 max-w-[620px] w-full shadow-[0_30px_80px_-25px_rgba(20,33,61,0.35)] overflow-hidden"
+        className="relative bg-papercard border border-line rounded-[24px] p-5 sm:p-8 max-w-[620px] w-full max-h-[90vh] overflow-auto shadow-[0_30px_80px_-25px_rgba(20,33,61,0.35)]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-tealdeep via-mango to-tealc" />
@@ -80,12 +80,12 @@ export default function StartupOfferPopup({ offer, contact }) {
         <button
           onClick={close}
           aria-label="Close popup"
-          className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full border border-line bg-paper text-inksoft hover:border-ink hover:text-ink transition"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 flex items-center justify-center rounded-full border border-line bg-paper text-inksoft hover:border-ink hover:text-ink transition"
         >
           ✕
         </button>
 
-        <div className="flex items-center gap-3 mb-4 flex-wrap pr-10">
+        <div className="flex items-center gap-3 mb-4 flex-wrap pr-10 sm:pr-12">
           <span className="font-mono text-xs tracking-[0.14em] uppercase text-tealdeep">{offer.eyebrow}</span>
           {offer.badge && (
             <span className="bg-mango text-ink font-mono text-[11px] px-2.5 py-1 rounded-full font-semibold">
@@ -95,10 +95,10 @@ export default function StartupOfferPopup({ offer, contact }) {
         </div>
 
         <h2 className="font-disp font-bold text-[22px] sm:text-[28px] mb-3 leading-tight">{offer.title}</h2>
-        <p className="text-inksoft text-[14.5px] sm:text-[15px] mb-5 leading-6">{offer.lead}</p>
+        <p className="text-inksoft text-[14.5px] sm:text-[15px] mb-5 leading-6 max-w-[540px]">{offer.lead}</p>
 
         {offer.features && offer.features.length > 0 && (
-          <ul className="flex flex-col gap-2.5 mb-6 rounded-2xl border border-line bg-paper/70 p-4">
+          <ul className="flex flex-col gap-2.5 mb-5 rounded-2xl border border-line bg-paper/70 p-4 sm:mb-6">
             {offer.features.map((f, i) => (
               <li key={i} className="flex items-start gap-2.5 text-[13.5px] text-inksoft">
                 <span className="mt-1 w-1.5 h-1.5 rounded-full bg-tealc flex-shrink-0"></span>
@@ -108,7 +108,7 @@ export default function StartupOfferPopup({ offer, contact }) {
           </ul>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 mt-6">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 mt-4 sm:mt-6">
           <div>
             <label className="text-xs font-mono text-inksoft uppercase tracking-wide">Name</label>
             <input
