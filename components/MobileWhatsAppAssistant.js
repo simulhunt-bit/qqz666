@@ -51,17 +51,28 @@ export default function MobileWhatsAppAssistant({ contact, services = [], faq = 
 
   return (
     <div className="fixed bottom-4 right-4 z-[120]">
-      <div className="relative">
-        <div className="absolute inset-0 rounded-full bg-tealdeep/20 blur-xl" />
-        <button
-          type="button"
-          onClick={() => setOpen((prev) => !prev)}
-          aria-label="Open WhatsApp assistant"
-          className="relative flex h-14 w-14 items-center justify-center rounded-full border border-line bg-paper p-1 shadow-[0_18px_45px_-20px_rgba(20,33,61,0.45)] transition hover:-translate-y-0.5 sm:h-16 sm:w-16"
-        >
-          <span className="pointer-events-none absolute inset-0 rounded-full animate-pulse [animation-duration:3s] bg-tealdeep/10" />
-          <img src="/logo.png" alt="Qartibe logo" className="relative h-11 w-11 object-contain sm:h-12 sm:w-12" />
-        </button>
+      <div className="relative flex flex-col items-end gap-2">
+        <div className="relative mr-1">
+          <span className="inline-flex items-center rounded-full border border-line bg-paper/95 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-tealdeep shadow-sm">
+            <span className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-tealdeep animate-pulse" />
+            Need Help
+          </span>
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-tealdeep/20 blur-xl" />
+          <button
+            type="button"
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label="Open WhatsApp assistant"
+            className="relative flex h-16 w-16 items-center justify-center rounded-full border border-line bg-gradient-to-br from-paper to-[#f6f8fb] p-1 shadow-[0_18px_45px_-20px_rgba(20,33,61,0.45)] transition hover:-translate-y-0.5 sm:h-18 sm:w-18"
+          >
+            <span className="pointer-events-none absolute inset-0 rounded-full animate-pulse [animation-duration:3s] bg-tealdeep/10" />
+            <div className="relative flex h-full w-full items-center justify-center rounded-full border border-line/70 bg-paper">
+              <img src="/logo.png" alt="Qartibe logo" className="relative h-10 w-10 object-contain sm:h-11 sm:w-11" />
+            </div>
+          </button>
+        </div>
 
         {open && (
           <div className="absolute bottom-18 right-0 mt-3 w-[92vw] max-w-[340px] rounded-[22px] border border-line bg-papercard p-3 shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)] sm:right-0">
