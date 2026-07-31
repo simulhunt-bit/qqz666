@@ -5,6 +5,8 @@ const SHOW_DELAY_MS = 5000;
 
 export default function StartupOfferPopup({ offer, contact }) {
   const [visible, setVisible] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const close = useCallback(() => {
     setVisible(false);
@@ -18,6 +20,9 @@ export default function StartupOfferPopup({ offer, contact }) {
   useEffect(() => {
     if (!offer) return;
 
+    const openPopup = () => setVisible(true);
+    window.addEventListener('startup-offer:open', openPopup);
+
     let alreadyDismissed = false;
     try {
       alreadyDismissed = sessionStorage.getItem(SESSION_KEY) === '1';
@@ -27,7 +32,10 @@ export default function StartupOfferPopup({ offer, contact }) {
     if (alreadyDismissed) return;
 
     const timer = setTimeout(() => setVisible(true), SHOW_DELAY_MS);
-    return () => clearTimeout(timer);
+    return () => {
+      window.removeEventListener('startup-offer:open', openPopup);
+      clearTimeout(timer);
+    };
   }, [offer]);
 
   useEffect(() => {
@@ -40,7 +48,19 @@ export default function StartupOfferPopup({ offer, contact }) {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [visible, close]);
 
+  useEffect(() => {
+    if (!visible) {
+      setSubmitted(false);
+      setFormData({ name: '', email: '', message: '' });
+    }
+  }, [visible]);
+
   if (!offer || !visible) return null;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
 
   return (
     <div
@@ -52,7 +72,7 @@ export default function StartupOfferPopup({ offer, contact }) {
       onClick={close}
     >
       <div
-        className="relative bg-papercard border border-line rounded-2xl p-7 sm:p-8 max-w-[440px] w-full shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)]"
+        className="relative bg-papercard border border-line rounded-2xl p-7 sm:p-8 max-w-[560px] w-full shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -86,12 +106,55 @@ export default function StartupOfferPopup({ offer, contact }) {
           </ul>
         )}
 
-        <a
-          href={`${contact.whatsappLink}?text=${encodeURIComponent(offer.waText)}`}
-          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-[15px] border-2 border-ink bg-ink text-paper hover:-translate-y-0.5 transition w-full sm:w-auto justify-center"
-        >
-          {offer.ctaText}
-        </a>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 mt-6">
+          <div>
+            <label className="text-xs font-mono text-inksoft uppercase tracking-wide">Name</label>
+            <input
+              required
+              type="text"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="w-full mt-1 px-3.5 py-3 border border-line rounded-lg bg-paper text-sm"
+            />
+          </div>
+          <div>
+            <label className="text-xs font-mono text-inksoft uppercase tracking-wide">Email</label>
+            <input
+              required
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="w-full mt-1 px-3.5 py-3 border border-line rounded-lg bg-paper text-sm"
+            />
+          </div>
+          <div>
+            <label className="text-xs font-mono text-inksoft uppercase tracking-wide">What do you want to claim?</label>
+            <textarea
+              required
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              className="w-full mt-1 px-3.5 py-3 border border-line rounded-lg bg-paper text-sm min-h-[100px]"
+            />
+          </div>
+          <button
+            type="submit"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold text-[15px] border-2 border-ink bg-ink text-paper"
+          >
+            Claim offer
+          </button>
+          {submitted && (
+            <p className="text-[13px] text-tealdeep">Thanks! We’ll reach out shortly with your free offer details.</p>
+          )}
+        </form>
+
+        {contact?.whatsappLink && (
+          <a
+            href={contact.whatsappLink}
+            className="inline-flex items-center gap-2 mt-4 text-[14px] text-tealdeep hover:text-ink transition"
+          >
+            Or message us on WhatsApp instead
+          </a>
+        )}
       </div>
     </div>
   );

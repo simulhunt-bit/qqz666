@@ -1,7 +1,11 @@
-import Script from 'next/script';
-
-export default function StartupOffer({ offer, contact }) {
+export default function StartupOffer({ offer }) {
   if (!offer) return null;
+
+  const openOfferPopup = () => {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('startup-offer:open'));
+    }
+  };
 
   return (
     <section id="startup-offer" className="py-24">
@@ -18,22 +22,13 @@ export default function StartupOffer({ offer, contact }) {
             </div>
             <h2 className="font-disp font-bold text-[26px] sm:text-[34px] mb-3">{offer.title}</h2>
             <p className="text-inksoft text-[15px] mb-6 max-w-[480px]">{offer.lead}</p>
-            <a
-              href={`${contact.whatsappLink}?text=${encodeURIComponent(offer.waText)}`}
+            <button
+              type="button"
+              onClick={openOfferPopup}
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-[15px] border-2 border-ink bg-ink text-paper hover:-translate-y-0.5 transition"
             >
               {offer.ctaText}
-            </a>
-
-            <div className="mt-6 rounded-2xl border border-line bg-paper p-4 sm:p-6">
-              <Script src="https://js-na2.hsforms.net/forms/embed/246920573.js" strategy="afterInteractive" />
-              <div
-                className="hs-form-frame"
-                data-region="na2"
-                data-form-id="aadfafa3-6149-47ee-a6dc-9970171f4dfa"
-                data-portal-id="246920573"
-              />
-            </div>
+            </button>
           </div>
 
           {offer.features && offer.features.length > 0 && (
