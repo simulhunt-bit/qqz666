@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 export default function StartupOffer({ offer, contact }) {
   if (!offer) return null;
 
@@ -22,6 +24,16 @@ export default function StartupOffer({ offer, contact }) {
             >
               {offer.ctaText}
             </a>
+
+            <div className="mt-6 rounded-2xl border border-line bg-paper p-4 sm:p-6">
+              <Script src="https://js-na2.hsforms.net/forms/embed/246920573.js" strategy="afterInteractive" />
+              <div
+                className="hs-form-frame"
+                data-region="na2"
+                data-form-id="aadfafa3-6149-47ee-a6dc-9970171f4dfa"
+                data-portal-id="246920573"
+              />
+            </div>
           </div>
 
           {offer.features && offer.features.length > 0 && (
