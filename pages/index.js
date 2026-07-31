@@ -16,6 +16,7 @@ import Faq from '@/components/Faq';
 import Team from '@/components/Team';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import MobileWhatsAppAssistant from '@/components/MobileWhatsAppAssistant';
 import { consumePendingScroll } from '@/lib/scroll';
 
 export default function Home({ content }) {
@@ -49,6 +50,7 @@ export default function Home({ content }) {
         <Team team={content.team} />
         <Contact contact={content.contact} />
         <Footer />
+        <MobileWhatsAppAssistant contact={content.contact} services={content.services} faq={content.faq} />
       </div>
     </>
   );
