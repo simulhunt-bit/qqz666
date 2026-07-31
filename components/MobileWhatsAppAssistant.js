@@ -50,10 +50,10 @@ export default function MobileWhatsAppAssistant({ contact, services = [], faq = 
   }, [services, faq]);
 
   return (
-    <div className="fixed bottom-4 right-4 z-[120]">
-      <div className="relative flex flex-col items-end gap-2">
-        <div className="relative mr-1">
-          <span className="inline-flex items-center rounded-full border border-line bg-paper/95 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-tealdeep shadow-sm">
+    <div className="fixed bottom-3 right-3 z-[120] sm:bottom-4 sm:right-4">
+      <div className="relative flex flex-col items-end gap-2 sm:gap-2.5">
+        <div className="relative mr-1 sm:mr-1.5">
+          <span className="inline-flex items-center rounded-full border border-line bg-paper/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-tealdeep shadow-sm sm:text-[11px]">
             <span className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-tealdeep animate-pulse" />
             Need Help
           </span>
@@ -65,18 +65,18 @@ export default function MobileWhatsAppAssistant({ contact, services = [], faq = 
             type="button"
             onClick={() => setOpen((prev) => !prev)}
             aria-label="Open WhatsApp assistant"
-            className="relative flex h-16 w-16 items-center justify-center rounded-full border border-line bg-gradient-to-br from-paper to-[#f6f8fb] p-1 shadow-[0_18px_45px_-20px_rgba(20,33,61,0.45)] transition hover:-translate-y-0.5 sm:h-18 sm:w-18"
+            className="relative flex h-[58px] w-[58px] items-center justify-center rounded-full border border-line bg-gradient-to-br from-paper to-[#f6f8fb] p-1 shadow-[0_18px_45px_-20px_rgba(20,33,61,0.45)] transition hover:-translate-y-0.5 sm:h-[68px] sm:w-[68px]"
           >
             <span className="pointer-events-none absolute inset-0 rounded-full animate-pulse [animation-duration:3s] bg-tealdeep/10" />
             <div className="relative flex h-full w-full items-center justify-center rounded-full border border-line/70 bg-paper">
-              <img src="/logo.png" alt="Qartibe logo" className="relative h-10 w-10 object-contain sm:h-11 sm:w-11" />
+              <img src="/logo.png" alt="Qartibe logo" className="relative h-9 w-9 object-contain sm:h-10 sm:w-10" />
             </div>
           </button>
         </div>
 
         {open && (
-          <div className="absolute bottom-18 right-0 mt-3 w-[92vw] max-w-[340px] rounded-[22px] border border-line bg-papercard p-3 shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)] sm:right-0">
-            <div className="mb-2 flex items-start justify-between gap-3">
+          <div className="absolute bottom-[76px] right-0 mt-3 w-[92vw] max-w-[340px] rounded-[22px] border border-line bg-papercard p-3 shadow-[0_24px_60px_-20px_rgba(20,33,61,0.35)] sm:bottom-[88px] sm:right-0">
+            <div className="mb-2.5 flex items-start justify-between gap-3">
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-tealdeep">Quick help</p>
                 <p className="font-disp text-sm font-semibold text-ink">Pick a question</p>
@@ -91,7 +91,7 @@ export default function MobileWhatsAppAssistant({ contact, services = [], faq = 
               </button>
             </div>
 
-            <div className="flex max-h-[60vh] flex-col gap-2 overflow-auto pr-1">
+            <div className="flex max-h-[62vh] flex-col gap-2 overflow-auto pr-1 sm:max-h-[58vh]">
               {options.map((option, index) => (
                 <a
                   key={`${option.label}-${index}`}
